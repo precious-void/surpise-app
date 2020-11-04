@@ -1,0 +1,53 @@
+.typography {
+    &.h4 {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    &.h3 {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 27px;
+    }
+    &.h2 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 33px;
+    }
+    &.h1 {
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 36px;
+    }
+    &.body1 {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    &.body2 {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 17px;
+    }
+    &.label {
+        font-weight: bold;
+        font-size: 11px;
+        line-height: 12px;
+        text-transform: uppercase;
+        margin: 1rem 0; 
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}

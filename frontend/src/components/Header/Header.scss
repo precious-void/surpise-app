@@ -1,0 +1,52 @@
+@import '../../styles';
+
+.Header {
+    display: flex;
+    align-items: center;
+    background-color: $header-color;
+    height: $header-height;
+    width: 100%;
+    justify-content: center;
+
+    .Header__container {
+        padding: 0 10vw;
+        width: 100%;
+        max-width: $default-container-width;
+
+        a {
+            display: inline-block;
+            position: relative;
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+            transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        a:hover {
+            color: $main-color;
+
+            transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        a:last-child {
+            margin: 0;
+        }
+
+        a::after {
+            content : "";
+            position : absolute;
+            width : 100%;
+            height : 1px;
+            background-color: $main-color;
+            bottom: 0;
+            left: 0;
+            transform : scaleX(0);
+            transform-origin: bottom right;
+            transition : transform 0.25s linear;
+          }
+        a:hover::after {
+            transform-origin: bottom left;
+            transform: scaleX(1);
+        }
+    }
+}

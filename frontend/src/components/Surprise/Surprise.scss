@@ -1,0 +1,53 @@
+@import '../../styles';
+
+.Surprise {
+    img {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .TrumpQoute__wrapper {
+        display: flex;
+    }
+
+    .TrumpQoute_image {
+        display: inline-flex;
+        position: relative;
+    }
+
+    .TrumpQoute__text {
+        position: absolute;
+        text-align: center;
+        color: white;
+        text-shadow: 0 0 5px black;
+        bottom: 10%;
+        padding: 0 10%;
+    }
+
+    .ChuckNorris__wrapper {
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        border: 1px solid $main-color;
+        padding: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h3 {
+            font-weight: bold;
+            max-width: 60%;
+        }
+
+        img {
+            width: 60px;
+        }
+    }
+
+    .Meme__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}

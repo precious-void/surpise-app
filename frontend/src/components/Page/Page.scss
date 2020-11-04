@@ -1,0 +1,13 @@
+@import '../../styles';
+
+.Page {
+    display: flex;
+    justify-content: center;
+
+    .Page__container {
+        padding: 0 10vw;
+        width: 100%;
+        max-width: $default-container-width;
+        width: calc(100% - 20vw);
+    }
+}

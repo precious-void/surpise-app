@@ -1,0 +1,38 @@
+@mixin anim($what: all) {
+    transition: $what 0.25s ease;
+}
+
+$values: (0, 4, 6, 8, 12, 15, 16, 20, 24, 32, 40, 48, 64, 72);
+
+@each $v in $values {
+    .p-#{$v} {
+        padding: #{$v}px;
+    }
+    .pt-#{$v} {
+        padding-top: #{$v}px;
+    }
+    .pb-#{$v} {
+        padding-bottom: #{$v}px;
+    }
+    .pl-#{$v} {
+        padding-left: #{$v}px;
+    }
+    .pr-#{$v} {
+        padding-right: #{$v}px;
+    }
+    .m-#{$v} {
+        margin: #{$v}px;
+    }
+    .mt-#{$v} {
+        margin-top: #{$v}px;
+    }
+    .mb-#{$v} {
+        margin-bottom: #{$v}px;
+    }
+    .ml-#{$v} {
+        margin-left: #{$v}px;
+    }
+    .mr-#{$v} {
+        margin-right: #{$v}px;
+    }
+}

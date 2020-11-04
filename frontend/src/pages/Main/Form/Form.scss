@@ -1,0 +1,29 @@
+@import '../../../styles';
+
+.Form {
+    .input.full-width {
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    button.button {
+        border-radius: 0;
+        background: white;
+        padding: 7px 24px;
+        outline: 0;
+        border: 2px solid $main-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    input, select {
+        border-radius: 0;
+        background: white;
+        outline: 0;
+        border: 2px solid $main-color;
+        font-weight: 400;
+        padding: 7px 5px;
+    }
+}
