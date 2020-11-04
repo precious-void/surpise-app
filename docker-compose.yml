@@ -1,19 +1,26 @@
 version: "3"
 services:
-  db:
-    image: mongo
-    ports:
-      - "27017:27017"
-    container_name: surprise-db
   api:
     build: ./backend
+    env_file:
+      - .env
+    environment:
+      MONGODB_URI: ${MONGODB_URI}
+      MONGODB_URI_TEST: ${MONGODB_URI_TEST}
     ports:
-      - "8080:8080"
+      - "9080:9080"
     depends_on:
-      - db
-    container_name: surprise-api
+      - mongodb
+    container_name: surprise-app-api
+
   client:
     build: ./frontend
     ports:
-      - "80:80"
-    container_name: surprise-client
+      - "3000:3000"
+    container_name: surprise-app-client
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    container_name: surprise-app-db
