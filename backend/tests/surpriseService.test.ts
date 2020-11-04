@@ -1,8 +1,8 @@
 import 'mocha';
 import { expect } from 'chai';
 import dotenv from 'dotenv';
-import { getSurpriseData } from '../src/Surprise/services/externalService';
-import { IUser } from '../src/Surprise/models/userData';
+import { getSurpriseData } from '../src/services/externalService';
+import { IUser } from '../src/models/userData';
 
 dotenv.config({ path: '../.env' });
 

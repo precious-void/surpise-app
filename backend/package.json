@@ -5,7 +5,7 @@
   "main": "src/server.ts",
   "private": true,
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start": "node dist/server.js",
     "watch": "nodemon",
     "build": "tsc",
     "test": "nodemon --watch . --ext ts --exec \"mocha -r ts-node/register tests/**/*.test.ts\""

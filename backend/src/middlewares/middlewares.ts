@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import mainRoutes from '../routes';
-import surpriseRoutes from '../Surprise/routes/surpriseRoutes';
+import surpriseRoutes from '../routes/surpriseRoutes';
 
 const middleware = express();
 const routes = [mainRoutes, surpriseRoutes];
