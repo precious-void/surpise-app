@@ -23,9 +23,11 @@ async function Start() {
             });
         } catch (err) {
             console.log(err);
+            process.exit(1);
         }
     } else {
         console.log('MongoDB is not connected');
+        process.exit(1);
     }
 }
 

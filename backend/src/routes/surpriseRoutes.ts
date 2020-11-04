@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
 import express from 'express';
 import { getSurprise, getStatistics } from '../services/surpriseService';
-import asyncHandler from '../../middlewares/asyncHandler';
+import asyncHandler from '../middlewares/asyncHandler';
 
 const router = Router();
 const toJSON = express.json();
