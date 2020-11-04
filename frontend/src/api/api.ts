@@ -13,8 +13,6 @@ export const throwErr = (response: any) =>
     response.error ? Promise.reject(new Error(response.error)) : Promise.resolve(response);
 
 export default function api(url: string, body?: any, headers?: Record<string, string>, mainUrl = baseUrl) {
-    console.log({ url, headers, body });
-
     const finalHeaders: Record<string, string> = {
         'Content-Type': 'application/json',
         Accept: 'application/json',

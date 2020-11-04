@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import './Form.scss';
 import Typography from 'components/Typography';
 import countries from './counrties';
@@ -22,7 +22,7 @@ interface FormProps {
 
 const Form: React.FunctionComponent<FormProps> = ({ setSurprise }) => {
     const [errorResponse, setErrorResponse] = useState<string>('');
-    const { handleChange, handleSubmit, values, errors } = useFormik({
+    const { setFieldValue, handleChange, handleSubmit, values, errors } = useFormik({
         validationSchema: SurpriseSchema,
         initialValues: {
             name: '',
@@ -38,13 +38,17 @@ const Form: React.FunctionComponent<FormProps> = ({ setSurprise }) => {
         },
     });
 
+    const nameChange = ({ target: { value, name } }: ChangeEvent<HTMLInputElement>) => {
+        setFieldValue(name, value.replace(/[^A-Za-z\s]/gi, ''));
+    };
+
     return (
         <form onSubmit={handleSubmit} className="Form">
             <div className="input full-width">
                 <Typography size="label" htmlFor="name">
                     Your name
                 </Typography>
-                <input id="name" name="name" type="text" value={values.name} onChange={handleChange} />
+                <input id="name" name="name" type="text" value={values.name} onChange={nameChange} />
             </div>
             <div className="input full-width">
                 <Typography size="label" htmlFor="birth_date">

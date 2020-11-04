@@ -17,7 +17,6 @@ export const getSurprise = async (request: Request, response: Response): Promise
 
     try {
         const surpriseData = await getSurpriseData(userMetaData);
-        console.log(surpriseData);
 
         const user = new UserDataModel({
             name: name as string,

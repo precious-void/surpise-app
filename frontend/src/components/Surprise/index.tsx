@@ -38,8 +38,8 @@ const Surprise: React.FunctionComponent<SurpriseProps> = ({ values }) => {
                 </Typography>
 
                 <div className="TrumpQoute__wrapper">
-                    <div className="TrumpQoute_image">
-                        <Typography size="h3" color="primary" className="TrumpQoute__text">
+                    <div className="TrumpQoute_image-wrapper">
+                        <Typography size="h3" color="primary">
                             {message}
                         </Typography>
 

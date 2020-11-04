@@ -1,6 +1,6 @@
 import React from 'react';
 import './StatisticsComponent.scss';
-import { StatisticsResponse, Distribution } from 'types';
+import { StatisticsResponse } from 'types';
 import Typography from 'components/Typography';
 
 interface StatisticsProps {

@@ -24,7 +24,6 @@ export const getAverageAge = async (): Promise<number> => {
     ]);
 
     const averageAge = Math.floor(averageAgeResponse[0].average_age);
-    console.log(averageAge);
     return averageAge;
 };
 
