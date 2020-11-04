@@ -18,7 +18,9 @@ const Main = () => {
         <Page>
             {!surprise ? (
                 <>
-                    <Typography size="h1">Main</Typography>
+                    <Typography size="h1" color="primary">
+                        Main
+                    </Typography>
                     <Typography size="body1" color="primary">
                         Get the best surprise in your life!
                     </Typography>

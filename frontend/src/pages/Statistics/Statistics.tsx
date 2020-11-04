@@ -5,6 +5,8 @@ import { StatisticsResponse } from 'types';
 import Page from 'components/Page';
 import { SurpriseService } from 'api/surprise-service';
 import Typography from 'components/Typography';
+import StatisticsComponent from 'components/StatisticsComponent';
+
 const Statistics = () => {
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState<string>();
@@ -32,7 +34,7 @@ const Statistics = () => {
                         </Typography>
                     </div>
                 ) : (
-                    'Statisticas'
+                    data && <StatisticsComponent values={data} />
                 )
             ) : (
                 <Typography size="body1">Loading...</Typography>

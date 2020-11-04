@@ -1,0 +1,9 @@
+@import '../../styles';
+
+.StatisticsComponent {
+    .StatisticsComponent__parameter {
+        & > p {
+            display: inline-block
+        }
+    }
+}
