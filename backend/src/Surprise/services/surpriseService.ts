@@ -30,7 +30,7 @@ export const getSurprise = async (request: Request, response: Response): Promise
 
         return response.json(surpriseData);
     } catch {
-        return response.status(500).send('Internal server error');
+        return response.status(500).send('{error: "Internal server error"}');
     }
 };
 
@@ -44,6 +44,6 @@ export const getStatistics = async (request: Request, response: Response): Promi
         // Get Average Age
         return response.json({ averageAge, distribution, countriesDistribution });
     } catch {
-        return response.status(500).send('Internal server error');
+        return response.status(500).send('{"error": "Internal server error"}');
     }
 };

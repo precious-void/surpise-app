@@ -5,7 +5,7 @@ import { SurpriseResponse } from 'types';
 import Page from 'components/Page';
 import Typography from 'components/Typography';
 import Surprise from 'components/Surprise';
-import Form from './Form';
+import Form from 'components/Form';
 
 const Main = () => {
     const [surprise, setSurprise] = useState<SurpriseResponse>();
@@ -18,9 +18,7 @@ const Main = () => {
         <Page>
             {!surprise ? (
                 <>
-                    <Typography size="h1" color="primary">
-                        Main
-                    </Typography>
+                    <Typography size="h1">Main</Typography>
                     <Typography size="body1" color="primary">
                         Get the best surprise in your life!
                     </Typography>

@@ -14,3 +14,19 @@ export interface SurpriseResponse {
     image_url?: string;
     message?: string;
 }
+
+export interface Distribution {
+    Meme: number;
+    TrumpQoute: number;
+    ChuckNorris: number;
+}
+
+export interface CountriesDistribution {
+    [country: string]: number;
+}
+
+export interface StatisticsResponse {
+    averageAge: number;
+    distribution: Distribution;
+    countriesDistribution: CountriesDistribution;
+}

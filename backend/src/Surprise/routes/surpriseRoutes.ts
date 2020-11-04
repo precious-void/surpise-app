@@ -12,7 +12,7 @@ router.post(
     asyncHandler(async (req: Request, res: Response) => await getSurprise(req, res)),
 );
 
-router.get(
+router.post(
     '/get_statistics',
     toJSON,
     asyncHandler(async (req: Request, res: Response) => await getStatistics(req, res)),
